@@ -21,7 +21,7 @@ PKG_BUILD_PARALLEL:=1
 PKG_BUILD_FLAGS:=no-mips16
 
 GO_PKG:=github.com/cloudflare/cloudflared
-GO_PKG_LDFLAGS_X:=main.Version=$(PKG_VERSION)
+GO_PKG_LDFLAGS_X:=main.Version=$(PKG_VERSION) -s -w
 
 include $(INCLUDE_DIR)/package.mk
 include ../../lang/golang/golang-package.mk
