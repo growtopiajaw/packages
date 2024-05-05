@@ -48,8 +48,7 @@ endef
 define Build/Compile
 	$(call GoPackage/Build/Compile)
 	# comment this line if upx not present
-	$(STAGING_DIR_HOST)/bin/upx --ultra-brute --best $(GO_PKG_BUILD_BIN_DIR)/cloudflared
-	chmod +x ./files/etc/init.d/cloudflared
+	#$(STAGING_DIR_HOST)/bin/upx --ultra-brute --best $(GO_PKG_BUILD_BIN_DIR)/cloudflared
 endef
 
 define Package/$(PKG_NAME)/install
